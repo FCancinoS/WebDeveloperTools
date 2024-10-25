@@ -44,3 +44,20 @@ section{
 hr{
     width: 50%;
 }
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Fondo del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;  /* Color del "pulgar" (la parte que se arrastra) */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;  /* Cambio de color al pasar el mouse por encima */
+}
