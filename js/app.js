@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "hotties": ["#D7CEC7", "#565656", "#76323F", "#C09F80"],
         "fresh": ["#77c9d4", "#57bc90", "#015249", "#A5A5AF"],
         "luxury": ["#0f1626", "#ab987a", "#ff533d", "#f5f5f5"],
-        "tommy": ["#DDDDDD", "#222831", "#30475E", "#F05454"],
+        "tommy": ["#DDDDDD", "#222831", "#30475E", "#CA2424"],
         "nidea": ["#151515", "#A91D3A", "#C73659", "#EEEEEE"],
         "clean": ["#EFF5F5", "#D6E4E5", "#497174", "#EB6440"],
         "duck": ["#041C32", "#04293A", "#064663", "#ECB365"],
