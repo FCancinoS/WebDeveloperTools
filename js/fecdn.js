@@ -199,17 +199,33 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.width = image.width; // Establecer ancho del canvas
         canvas.height = image.height; // Establecer alto del canvas
         const ctx = canvas.getContext('2d'); // Obtener el contexto del canvas
-
+    
+        // Mostrar el contenedor del spinner mientras se procesa
+        const spinnerContainer = document.getElementById('spinner-container');
+        spinnerContainer.style.display = 'flex'; // Mostrar el spinner
+    
         // Dibujar la imagen en el canvas
         ctx.drawImage(image, 0, 0);
-
+    
         // Comprimir la imagen y obtener el nuevo Data URL
         const quality = 0.7; // Ajusta la calidad entre 0 y 1
         const compressedDataUrl = canvas.toDataURL('image/jpeg', quality);
-
+    
+        // Ocultar el spinner y mostrar mensaje de completado
+        spinnerContainer.style.display = 'none'; // Ocultar el spinner
+    
+        Swal.fire({
+            icon: 'success',
+            title: 'Completado',
+            text: 'La imagen ha sido comprimida con éxito.',
+            timer: 3000,
+            showConfirmButton: false
+        });
+    
         // Mostrar el enlace de descarga
         displayDownloadLink(compressedDataUrl, originalFileName);
     }
+    
 
     function displayDownloadLink(dataUrl, originalFileName) {
         const outputContainer = document.getElementById('output2');
