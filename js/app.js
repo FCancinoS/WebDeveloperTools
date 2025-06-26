@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Diccionario de colores
     const colorPalettes = {
+        "snes": ["#006fc8", "#00a473", "#ffdf22","#D23824","#979497", "#c9c6c7"], 
         "hotties": ["#D7CEC7", "#565656", "#76323F", "#C09F80"],
         "fresh": ["#77c9d4", "#57bc90", "#015249", "#A5A5AF"],
         "luxury": ["#0f1626", "#ab987a", "#ff533d", "#f5f5f5"],
