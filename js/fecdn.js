@@ -131,7 +131,7 @@ function generateHtmlCode(favicons) {
     let htmlCode = ''; // Variable para almacenar el código HTML
 
     favicons.forEach(favicon => {
-        htmlCode += `<link rel="icon" type="image/png" sizes="${favicon.size}x${favicon.size}" href="img/favicon/favicon-${favicon.size}x${favicon.size}.png">\n`;
+        htmlCode += `<link rel="icon" type="image/png" sizes="${favicon.size}x${favicon.size}" href="img/favicons/favicon-${favicon.size}x${favicon.size}.png">\n`;
     });
     // Copiar el código HTML al portapapeles
     document.getElementById('copy-html-button').addEventListener('click', () => {

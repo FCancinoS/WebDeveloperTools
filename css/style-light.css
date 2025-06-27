@@ -83,7 +83,7 @@ a.a-nav{
 
 .colored-nav{
     background-color: rgb(61, 61, 61);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 a.gold:hover{
     color: gold;
