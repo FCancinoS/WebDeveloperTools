@@ -28,7 +28,9 @@ const cdns = {
     "printjs": '<script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>',
     "jszip":'<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>',
     "classicCss": '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">',
-    "classicJs":'<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script><script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>'
+    "classicJs":'<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script><script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>',
+    "whatsappBtn": '<i class="fa-brands fa-whatsapp"></i>',
+    "trashBtn": '<i class="fa-regular fa-trash-can"></i>'
 };
 /*************************************************   CLIPBOARD FUNCTION  **********************************************/
 // Función para copiar al portapapeles
