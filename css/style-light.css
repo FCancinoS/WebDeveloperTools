@@ -1,69 +1,103 @@
-body{
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
 
+body {
     background-color: #e4e4e4;
-    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-main{
+main {
     background-color: white;
-    width: 70%;
-    margin: auto;
-    border: 1px solid white;
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 1em;
-    height: 100%;
-    margin-top: 0px;
+    padding: 0.5rem;
+    min-height: 98vh;
 }
-section{
+
+/* Header */
+header {
     text-align: center;
-    margin-bottom: 20px;
-}
-hr{
-    width: 50%;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
-
-::-webkit-scrollbar {
-    width: 3px;
+.header-title {
+    font-size: 1.5rem;
+    color: rgb(40, 156, 233);
 }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1;  /* Fondo del scrollbar */
+.section-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #888;  /* Color del "pulgar" (la parte que se arrastra) */
-    border-radius: 5px;
+/* Container Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    flex: 1;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #555;  /* Cambio de color al pasar el mouse por encima */
-}
-
-
-.header-title{
-    font-size: xx-large;
+/* Sections */
+section {
+    background-color: #e7e7e7;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: center;
-    padding: 0.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
-.b-color{
-    width: 13em;
-    height: 9em;
-    border-radius: 1em;
+/* Buttons */
+.btn {
+    padding: 0.6rem 1.2rem;
     border: none;
-    box-shadow: 0px 2px 2px rgb(207, 207, 207);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-.b-color:hover{
-    transform: scale(1.1);
-    
+.btn:hover {
+    transform: scale(1.05);
 }
-.section-title{
-    font-size: 3em;
+
+.btn-green {
+    background-color: #28a745;
+    color: white;
 }
-.section-subtitle{
-    font-size: 2em;
-    margin: 10px 0; /* Espaciado superior e inferior */
+
+.btn-blue {
+    background-color: #007bff;
+    color: white;
+}
+
+.yellow {
+    background-color: #f7df1e;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.85rem;
 }
 
 .ul-nav{
@@ -85,147 +119,84 @@ a.a-nav{
     background-color: rgb(61, 61, 61);
     border-radius: 5px;
 }
-a.gold:hover{
-    color: gold;
-}
-a.sblue:hover{
-    color: rgb(139, 228, 255);
-}
-.btn{
-    padding: 1.5vh;
-    border-radius: 3px;
-    border: none;
-}
-.btn:hover{
-    transform:scale(1.1);
-    filter: brightness(1.1);
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
 }
 
-.btn-cyan{
-    background-color: rgb(25, 139, 133);
-    color:white;
-}
-
-.btn-blue{
-    background-color: rgb(40, 156, 233);
-    color: white;
-}
-.blue{
-    color: rgb(40, 156, 233);
-}
-.btn-green{
-    background-color: rgb(25, 150, 41);
-    color: white;
-}
-a{
-    text-decoration: none;
-    color:rgb(66, 132, 255)
-}
-
-.two-columns{
+.btn-small {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 60px;
+    height: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
-.divided{
+
+.btn-cp {
+    font-size: 2rem;
+}
+.li-white {
+    color: white!important;
+    padding-left: 10px;
+}
+
+.medium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 12px;
+    justify-items: center;
+    align-items: center;
+}
+
+.btn-medium {
+    padding: 0.5rem 0.8rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100px;
+    height: 45px;
     display: flex;
-    justify-content:space-around;
+    justify-content: center;
+    align-items: center;
 }
-.classic-blue{
-    background-color: rgb(21, 110, 226);
-    color: white;
+
+
+::-webkit-scrollbar {
+    width: 3px;
 }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Fondo del scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;  /* Color del "pulgar" (la parte que se arrastra) */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;  /* Cambio de color al pasar el mouse por encima */
+}
+
 
 input[type="file"] {
     display: none;
   }
-  
-  .custom-file-upload {
+
+    .custom-file-upload {
     border: 1px solid #ccc;
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
   }
 
-
-  .html-code {
-    position: relative; /* Para posicionar el botón */
-    border: 1px solid #ccc; /* Bordes */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
-    background-color: #f9f9f9; /* Color de fondo */
-    width: 50%; /* Ancho completo */
-    max-height: 200px; /* Altura máxima */
-    overflow: auto; /* Habilitar desplazamiento */
-    font-family: monospace; /* Fuente monoespaciada */
-    resize: none; /* Deshabilitar el redimensionamiento */
-    margin: auto;
-}
-
-/* Estilo para el botón de copiar */
-.copy-button {
-    background-color: #4CAF50; /* Color de fondo verde */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 3px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor en forma de mano */
-    padding: 5px 10px; /* Espaciado interno */
-}
-.yellow{
-    background-color: #f7df1e;
-    color:rgb(50, 50, 50);
-
-}
-
-#output2 {
-    margin-bottom: 20px; /* Ajusta el valor según sea necesario */
-}
-#output{
-    margin-bottom: 20px; /* Ajusta el valor según sea necesario */
-}
-.btn-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los botones se ajusten a la siguiente línea si es necesario */
-    justify-content: center; /* Centra los botones dentro del contenedor */
-    gap: 10px; /* Espaciado entre los botones */
-    margin-bottom: 20px; /* Ajusta el valor según sea necesario */
-}
-#s-js-cdn{
-    max-width: 50%;
-   /* border: 1px solid rgba(0,0,0,0.1);*/
-}
-
-#s-favicon{
-    min-width: 50%;
-   /* border: 1px solid rgba(0,0,0,0.1);*/
-}
-#s-clapa{
-   /* border: 1px solid rgba(0,0,0,0.1);*/
-    min-width: 50%;
-}
-#s-fonts{
-    /*border: 1px solid rgba(0,0,0,0.1);*/
-    min-width: 50%;
-}
-
-#s-css-cdn{
-    /*border: 1px solid rgba(0,0,0,0.1);*/
-    min-width: 50%;
-}
-
-#s-image-optimizer{
-    /*border: 1px solid rgba(0,0,0,0.1);*/
-    min-width: 50%;
-}
-/*
-#s-fonta{
-    border: 1px solid rgba(0,0,0,0.1); 
-}
-*/
-#FontACDN{
-
-    margin: 20px 0;
-}
-#spinner-container {
+  #spinner-container {
     position: fixed; /* Para posicionarlo en la pantalla */
     top: 0;
     left: 0;
@@ -253,3 +224,46 @@ input[type="file"] {
     100% { transform: rotate(360deg); }
 }
 
+.btn-cyan{
+    background-color: rgb(25, 139, 133);
+    color:white;
+}
+.copy-button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    padding: 5px 10px; /* Espaciado interno */
+}
+
+a{
+    text-decoration: none;
+    color:rgb(66, 132, 255)
+}
+
+
+/********************************************** HOJA 2 ***********************************************/
+/* Hola, copilot, hablas español? */
+/* Sí, hablo español. ¿En qué puedo ayudarte hoy? */
+/* Aquí tienes el código CSS para la segunda hoja de estilos. */
+
+.b-color {
+    width: 4em;
+    height: 4em;
+    border-radius: 1em;
+    border: none;
+    box-shadow: 0px 2px 2px rgb(207, 207, 207);
+}
+
+.b-color:hover {
+    transform: scale(1.1);
+}
+
+.uncle-harlo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 1rem;
+    justify-items: center;
+    margin-bottom: 20px;
+}

@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./images/favicon_io/site.webmanifest">
     <link rel="stylesheet" href="./css/style-light.css">
-    <title>Tools</title>
 </head>
 <body>
     <main>
         <header>
-            <div class="header-title blue"> <i class="fa-solid fa-screwdriver-wrench"></i> Tools
             <nav class="colored-nav">
                 <ul class="ul-nav">
+                    <li class="li-white"> <i class="fa-solid fa-screwdriver-wrench"></i> Tools</li>
                     <li><a class="a-nav sblue" href="index.html">Front-End </a></li>
                     <li><a class="a-nav sblue" href="cpalletes.html">Color Palletes</a></li><!--Every existing CDN-->
                     <li><a class="a-nav sblue" href="slides.html">Slides</a></li> <!--Shortener & QR-->
@@ -28,134 +27,90 @@
                     <li><a class="a-nav sblue" href=""></a></li>
                     <li><a class="a-nav sblue" href=""></a></li>
                 </ul>
-                
             </nav>
-            </div>
-        </header>
-
-        <div class="container">
-            
-            <div class="two-columns">            
-                <section id="s-fonts">
-                    <div class="section-subtitle">Fonts</div>
-                    <div class="fontsample raleway">
-                        Raleway
+    </header>
+    <div class="container">
+            <section>
+                <div class="section-subtitle">Favicon Generator</div>
+                <label for="file-upload" class="custom-file-upload">Choose a favicon picture</label>
+                <input type="file" id="file-upload" name="avatar" accept="image/png, image/jpeg"/>
+                <!--button class="btn btn-green">Generate Favicon</button-->
+                <div id="output">
                     </div>
-                        
-                    <button class="btn btn-copy btn-green"  id="fontRalew">Raleway CDN</button>
-                        
-                        
-                    <div class="fontsample raleway">
-                        Gothic A1
+                    <div class="icon-grid">
+                        <button class="copy-button btn btn-copy btn-small" id="copy-html-button">Copy</button>
+                        <button class="btn btn-reload btn-cyan btn-small" id="new-icon"> New icon</button>
                     </div>
-                        
-                    <button class="btn btn-copy btn-green"  id="fontGothic">Gothic A1 CDN</button>
-                </section>
-                <section id="s-clapa">
-                    <div class="section-subtitle">JS & CSS Classic Package</div>
-                    <button class="btn btn-copy btn-blue"  id="fontClaPaCss">Classic CSS Package</button>
-                    <button class="btn btn-copy yellow"  id="fontClaPaJs">Classic JS Package</button>
-
-                </section>
-            </div>     
-              
-            <div class="two-columns">    
-                <section id="s-css-cdn">
-                    
-                    <div class="section-subtitle ">CSS CDNs</div>
-                        
-                    <div class="btn-container ">
-                        <button class="btn btn-copy classic-blue three"  id="bootstrap">bootstrap</button>
-                        <button class="btn btn-copy classic-blue three"  id="bulma">bulma</button>
-                        <button class="btn btn-copy classic-blue three"  id="material">materialUI</button>
+            </section>
+            <section>
+                <div class="section-subtitle">Image Optimizer</div>
+                <label for="image-upload2" class="custom-file-upload">Choose a picture to reduce</label>
+                <input type="file" id="image-upload2" name="reductor" accept="image/png, image/jpeg"/>
+                <div id="output2">
                     </div>
-                </section>
-                <section id="s-js-cdn">
-                    
-                    <div class="section-subtitle"> JS CDNs</div>
-                    
-                    <div class="btn-container">
-                        <button class="btn btn-copy classic-blue"  id="jquery">Jquery</button>
-                        <button class="btn btn-copy classic-blue"  id="sweetA">Sweet Alert</button>
-                        <button class="btn btn-copy classic-blue"  id="anime">Anime</button>
-                        <button class="btn btn-copy classic-blue"  id="aos">Aos</button>
-                        <button class="btn btn-copy classic-blue"  id="pixi">Pixi</button>
-                        <button class="btn btn-copy classic-blue"  id="sortable">Sortable</button>
-                        <button class="btn btn-copy classic-blue"  id="clipboard">Clipboard</button>
-                        <button class="btn btn-copy classic-blue"  id="printjs">Print.js</button>
-                        <button class="btn btn-copy classic-blue"  id="jszip">Jszip</button>
-                    </div>
-                </section>
-            </div>
-            <div class="two-columns">
-                <section id="s-favicon">
-                    
-                    <div class="section-subtitle">Favicon generator</div>
-                    
-                    <label for="file-upload" class="custom-file-upload">Choose a favicon picture</label>
-                    
-                    <input type="file" id="file-upload" name="avatar" accept="image/png, image/jpeg"/>
-                    
-                    <!--button class="btn btn-green"  id="convert-button">Generate Favicon</button-->
-                    
-                    <div id="output">
-
-                    </div>
-                    <button class="copy-button btn" id="copy-html-button">Copy</button>
-                    <button class="btn btn-reload btn-cyan" id="new-icon"> New icon</button>
-                    
-                </section>   
-                <section id="s-image-optimizer">
-                    
-                    <div class="section-subtitle">Image Optimizer</div>
-                    
-                    <label for="image-upload2" class="custom-file-upload">Choose a picture to reduce</label>
-                    
-                    <input type="file" id="image-upload2" name="reductor" accept="image/png, image/jpeg"/>
-                    
-                    <!--button class="btn btn-green"  id="convert-button">Generate Favicon</button-->
-                    
-                    <div id="output2">
-
-                    </div>
-                    <button class="btn btn-green" id="compress-button"> Optimize</button>
-                    <button class="btn btn-reload btn-cyan" id="new-reduction"> Reduce another one</button>
+                <button class="btn btn-green" id="compress-button">Optimize Image</button>
+                <button class="btn btn-reload btn-cyan" id="new-reduction"> Reduce another one</button>
                     
                     <div id="spinner-container" style="display: none;">
                         <div id="spinner" class="spinner"></div>
                     </div>
                     <canvas id="canvas" style="display:none;"></canvas>
-                </section>
-            </div>
-            <section id="s-fonta">
-                <div class="section-subtitle">Font-Awesome Icons</div>
-                
-                <button class="btn btn-copy btn-cyan"  id="FontACDN">Font-Awesome CDN</button>
-                
-                
-                <div class="btn-container">
-                    <button class="btn btn-icn btn-blue btn-copy" id="worldBtn"><i class="fa-solid fa-earth-americas"></i></button>                    
-                    <button class="btn btn-icn btn-blue btn-copy" id="houseBtn"><i class="fa-solid fa-house"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="phoneBtn"><i class="fa-solid fa-phone"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="hamburgerBtn"><i class="fa-solid fa-bars"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="githubBtn"><i class="fa-brands fa-github"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="discordBtn"><i class="fa-brands fa-discord"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="heartBtn"><i class="fa-regular fa-heart"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="instaBtn"><i class="fa-brands fa-instagram"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="downloadBtn"><i class="fa-solid fa-download"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="arrightBtn"><i class="fa-solid fa-arrow-right"></i></button>
-                    <button class="btn btn-icn btn-blue btn-copy" id="clipBtn"><i class="fa-solid fa-paperclip"></i></button>                    
+            </section>
+            <section>
+                <div class="section-subtitle">Classic Packages</div>
+                <div class="icon-grid">
+                    <button class="btn btn-blue btn-copy  btn-cp" id="fontClaPaCss"><i class="fa-brands fa-css3-alt"></i></button>
+                    <button class="btn yellow btn-copy btn-cp"  id="fontClaPaJs"><i class="fa-brands fa-js"></i></button>
                 </div>
-                
-                More Icons free... <a href="https://fontawesome.com/search?o=r&m=free">here</a>
+            </section>
+            
+            <section>
+                <div class="section-subtitle">CSS CDNs</div>
+                <div class="medium-grid">
+                    <button class="btn btn-blue btn-copy  btn-medium" id="bootstrap">Bootstrap</button>
+                    <button class="btn btn-blue btn-copy  btn-medium" id="bulma">Bulma</button>
+                    <button class="btn btn-blue btn-copy  btn-medium" id="material">Material UI</button>                
+                </div>
+            </section>
+            
+            <section>
+                <div class="section-subtitle">JS CDNs</div>
+                <div class="medium-grid">
+                    <button class="btn btn-blue btn-copy  btn-medium" id="jquery">jQuery</button>
+                    <button class="btn btn-blue btn-copy  btn-medium" id="sweetA">SweetAlert</button>
+                    <button class="btn btn-blue btn-copy  btn-medium" id="anime">Anime</button>
+                </div>
+            </section>
+            <section>
+                <div class="section-subtitle">Fonts</div>
+                <div class="medium-grid">
+                    <button class="btn btn-green btn-copy btn-medium" id="bootstrap" >Raleway CDN</button>
+                    <button class="btn btn-green btn-copy btn-medium" id="fontGothic">Gothic A1 CDN</button>
+                </div>
+            </section>            
+            <section>
+                <div class="section-subtitle">Font Awesome Icons</div>
+                <div class="icon-grid">
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="worldBtn"><i class="fa-solid fa-earth-americas"></i></button>                    
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="houseBtn"><i class="fa-solid fa-house"></i></button>
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="phoneBtn"><i class="fa-solid fa-phone"></i></button>
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="hamburgerBtn"><i class="fa-solid fa-bars"></i></button>
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="githubBtn"><i class="fa-brands fa-github"></i></button> 
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="discordBtn"><i class="fa-brands fa-discord"></i></button>
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="heartBtn"><i class="fa-regular fa-heart"></i></button>
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="instaBtn"><i class="fa-brands fa-instagram"></i></button>
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="downloadBtn"><i class="fa-solid fa-download"></i></button>
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="arrightBtn"><i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="btn btn-icn btn-blue  btn-copy btn-small" id="clipBtn"><i class="fa-solid fa-paperclip"></i></button>                    
+                </div>
+            </section>
 
-            </section>  
-            <!--section id="s-duck">
-                <div class="section-subtitle">Duck</div>
-            </section-->
         </div>
 
+        <footer>
+            <p>© fcancino</p>
+        </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
