@@ -267,3 +267,33 @@ a{
     justify-items: center;
     margin-bottom: 20px;
 }
+
+@media (max-width: 1500px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .uncle-harlo {
+        grid-template-columns: repeat(3, 50px); /* 3 columnas en pantallas menores a 1500px */
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.small-qrcode-container {
+ height: 0px;
+}
+.large-qrcode-container {
+ display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -21,7 +21,7 @@
                     <li class="li-white"> <i class="fa-solid fa-screwdriver-wrench"></i> Tools</li>
                     <li><a class="a-nav sblue" href="index.html">Front-End </a></li>
                     <li><a class="a-nav sblue" href="cpalletes.html">Color Palletes</a></li><!--Every existing CDN-->
-                    <li><a class="a-nav sblue" href="slides.html">Slides</a></li> <!--Shortener & QR-->
+                    <li><a class="a-nav sblue" href="utilities.html">Utilities</a></li> <!--Shortener & QR-->
                     <li><a class="a-nav sblue" href="imgrd.html">Image Reductor</a></li>
                     <li><a class="a-nav sblue" href="ficons">Icons</a></li><!--Ficons and Favicon maker-->
                     <li><a class="a-nav sblue" href=""></a></li>
@@ -31,6 +31,14 @@
             </div>
         </header>
         <div class="container">
+            <section id="s-snes">
+                <div class="section-title">Palletes generator sites</div>
+                <hr> <div class="uncle-harlo">   
+                    <p><a href="https://colorhunt.co/">Color Hunts</a></p>
+                    <p><a href="https://coolors.co/fdffff-48bf84-f7b32b-0b4f6c-cf1259">Palletes</a></p>
+                    <p><a href="https://www.photoroom.com/tools/background-remover">Remove backgroung</a></p>
+                </div>
+            </section>
             <section id="s-snes">
                 <div class="section-title">SNES</div>
                 <hr> <div class="uncle-harlo">   
@@ -198,7 +206,26 @@
     gap: 1.5rem; /* Espacio entre secciones */
     padding: 1rem;
 }
+@media (max-width: 1500px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .uncle-harlo {
+        grid-template-columns: repeat(3, 50px); /* 3 columnas en pantallas menores a 1500px */
+    }
+}
 
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
         </style>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

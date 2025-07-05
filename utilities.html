@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
+    <link rel="stylesheet" href="./css/style-light.css">
+    <title>Color Palettes</title>
+</head>
+<body>
+    <main>
+        <header>
+                <nav class="colored-nav">
+                <ul class="ul-nav">
+                    <li class="li-white"> <i class="fa-solid fa-screwdriver-wrench"></i> Tools</li>
+                    <li><a class="a-nav sblue" href="index.html">Front-End </a></li>
+                    <li><a class="a-nav sblue" href="cpalletes.html">Color Palletes</a></li><!--Every existing CDN-->
+                    <li><a class="a-nav sblue" href="utilities.html">Utilities</a></li> <!--Shortener & QR-->
+                    <li><a class="a-nav sblue" href="imgrd.html">Image Reductor</a></li>
+                    <li><a class="a-nav sblue" href="ficons">Icons</a></li><!--Ficons and Favicon maker-->
+                    <li><a class="a-nav sblue" href=""></a></li>
+                    <li><a class="a-nav sblue" href=""></a></li>
+                </ul>
+            </nav>
+            </div>
+        </header>
+        <div class="container">
+                <section id="">
+                    <div class="section-title">QR Generator</div>
+                   <input id="text" type="text" placeholder="google.com"  /><br />
+                   <div id="qrcode"></div>     
+                   <button class="btn btn-cyan" id="qrBtn"> Generate</button>
+                </section>
+                <section id="">
+                    <div class="section-title">SweetAlerts Generator</div>
+                   <input  type="text" placeholder="google.com" /><br />
+                    <div id="qrcode"></div>     
+                </section>
+                <section id="">
+                    <div class="section-title">Ticket Scanner</div>
+                    <label for="ticket-scan-upload" class="custom-file-upload">Choose a ticket to scan</label>
+                     <input id="ticket-scan-upload" type="file" accept="image/*" /><br />
+                   <pre id="output"></pre>
+                    <div id="qrcode"></div>     
+                </section>
+                <section id="">
+                    <div class="section-title">Ticket Interpreter</div>
+                    <label for="ticket-scan2-upload" class="custom-file-upload">Choose a ticket to interprete</label>
+                   <input  type="file" placeholder="google.com" /><br />
+                    <div id="qrcode"></div>     
+                </section>
+                <section id="">
+                   <input  type="file" placeholder="google.com" /><br />
+                    <div id="qrcode"></div>     
+                </section>
+                <section id="">
+                   <input  type="text" placeholder="google.com" /><br />
+                    <div id="qrcode"></div>     
+                </section>
+                <section id="">
+                   <input  type="text" placeholder="google.com" /><br />
+                    <div id="qrcode"></div>     
+                </section>
+                <section id="">
+                   <input  type="text" placeholder="google.com" /><br />
+                    <div id="qrcode"></div>     
+                </section>
+
+        </div>
+        <style>
+            section{
+                max-height: 450px;
+                gap: 10px;
+            }
+            input[type="text"] {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                
+                box-sizing: border-box;
+            }
+        </style>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/6.0.1/tesseract.min.js" integrity="sha512-x3WuOingc6Q+P7pb4dV+MFLvfjIzTzk+e/HZwSdeIZ5VT5PEA67LMn60Tp3G7cj4pYVbdsPF0zjFqafDt/gOnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/feUtilities.js"></script>
+</body>
+</html>
