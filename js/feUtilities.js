@@ -43,14 +43,67 @@ function makeCode () {
 document.getElementById("qrBtn").addEventListener("click", function () {
   makeCode();
 });
-
 /***************************************** Sweats alerts generator  ******************************************/
+ document.getElementById("swalBtn").addEventListener("click", () => {
+    const type = document.getElementById("type-select").value;
+    let code = "";
+    switch (type) {
+      case "success":
+        code = `Swal.fire({
+  icon: 'success',
+  title: '¡Éxito!',
+  text: 'La operación se completó correctamente.'
+});`;
+        break;
 
+      case "error":
+        code = `Swal.fire({
+  icon: 'error',
+  title: '¡Error!',
+  text: 'Algo salió mal.'
+});`;
+        break;
 
+      case "warning":
+        code = `Swal.fire({
+  icon: 'warning',
+  title: 'Advertencia',
+  text: '¿Estás seguro de continuar?'
+});`;
+        break;
 
-
-
-
+      case "input":
+        code = `Swal.fire({
+  title: 'Ingresa un valor',
+  input: 'text',
+  inputPlaceholder: 'Escribe algo...',
+  showCancelButton: true
+}).then(result => {
+  if (result.value) {
+    console.log('Valor ingresado:', result.value);
+  }
+});`;
+        break;
+    }
+    // Copiar al portapapeles
+    navigator.clipboard.writeText(code)
+      .then(() => {
+        Swal.fire({
+          icon: 'success',
+          text: 'Código copiado exitosamente',
+          timer: 1500,
+          showConfirmButton: false
+        });
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: 'error',
+          text: 'Error al copiar al portapapeles',
+          timer: 1500,
+          showConfirmButton: false
+        });
+      });
+  });
 /************************************** OCR Ticket Scan with tesseract     *********************************/
 
   document.getElementById("imageInput").addEventListener("change", async (e) => {

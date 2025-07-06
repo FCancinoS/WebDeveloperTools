@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
     <link rel="stylesheet" href="./css/style-light.css">
-    <title>Color Palettes</title>
+    <title>Utilities</title>
 </head>
 <body>
     <main>
@@ -40,37 +40,40 @@
                 </section>
                 <section id="">
                     <div class="section-title">SweetAlerts Generator</div>
-                   <input  type="text" placeholder="google.com" /><br />
-                    <div id="qrcode"></div>     
+                    <select name="type" id="type-select">
+                        <option value="success">Success</option>
+                        <option value="error">Error</option>
+                        <option value="warning">Warning</option>
+                        <option value="Input">Input</option>
+                    </select>
+                   <!--input  type="text" placeholder="Completed" /><br /-->
+                   <button class="btn btn-green" id="swalBtn">Clipboard Copy</button>
                 </section>
                 <section id="">
                     <div class="section-title">Ticket Scanner</div>
                     <label for="ticket-scan-upload" class="custom-file-upload">Choose a ticket to scan</label>
-                     <input id="ticket-scan-upload" type="file" accept="image/*" /><br />
-                   <pre id="output"></pre>
-                    <div id="qrcode"></div>     
+                     <input id="imageInput" type="file" accept="image/*" /><br />  
+                     <button class="btn btn-cyan" id="scanBtn"> Scan</button>
                 </section>
                 <section id="">
                     <div class="section-title">Ticket Interpreter</div>
                     <label for="ticket-scan2-upload" class="custom-file-upload">Choose a ticket to interprete</label>
-                   <input  type="file" placeholder="google.com" /><br />
-                    <div id="qrcode"></div>     
+                   <input  type="file" placeholder="google.com" /><br /> 
                 </section>
                 <section id="">
-                   <input  type="file" placeholder="google.com" /><br />
-                    <div id="qrcode"></div>     
-                </section>
-                <section id="">
-                   <input  type="text" placeholder="google.com" /><br />
-                    <div id="qrcode"></div>     
+                    <div class="section-title">Html Menu Pages Generator</div>
+                   <input  type="text" placeholder="title;menu-1;menu-2;menu-3;menu4;" /><br />
+                   <button class="btn btn-green" id="Btn"> Clipboard Copy</button>
                 </section>
                 <section id="">
                    <input  type="text" placeholder="google.com" /><br />
-                    <div id="qrcode"></div>     
                 </section>
                 <section id="">
                    <input  type="text" placeholder="google.com" /><br />
-                    <div id="qrcode"></div>     
+                </section>
+                <section id="">
+                   <input  type="text" placeholder="google.com" /><br />
+
                 </section>
 
         </div>
@@ -86,6 +89,9 @@
                 
                 box-sizing: border-box;
             }
+            input[type="file"] {
+    display: block;
+  }
         </style>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/6.0.1/tesseract.min.js" integrity="sha512-x3WuOingc6Q+P7pb4dV+MFLvfjIzTzk+e/HZwSdeIZ5VT5PEA67LMn60Tp3G7cj4pYVbdsPF0zjFqafDt/gOnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
