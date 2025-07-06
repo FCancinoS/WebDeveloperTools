@@ -51,14 +51,15 @@
                 </section>
                 <section id="">
                     <div class="section-title">Ticket Scanner</div>
-                    <label for="ticket-scan-upload" class="custom-file-upload">Choose a ticket to scan</label>
+                    <label for="imageInput" class="custom-file-upload">Choose a ticket to scan</label>
                      <input id="imageInput" type="file" accept="image/*" /><br />  
                      <button class="btn btn-cyan" id="scanBtn"> Scan</button>
                 </section>
                 <section id="">
                     <div class="section-title">Ticket Interpreter</div>
-                    <label for="ticket-scan2-upload" class="custom-file-upload">Choose a ticket to interprete</label>
-                   <input  type="file" placeholder="google.com" /><br /> 
+                    <label for="imageInputInterpreter" class="custom-file-upload">Choose a ticket to decode</label>
+                   <input  id="imageInputInterpreter" type="file" placeholder="google.com" /><br /> 
+                   <button class="btn btn-cyan" id="decodeBtn"> Decode</button>
                 </section>
                 <section id="">
                     <div class="section-title">Html Menu Pages Generator</div>
@@ -66,13 +67,16 @@
                    <button class="btn btn-green" id="Btn"> Clipboard Copy</button>
                 </section>
                 <section id="">
-                   <input  type="text" placeholder="google.com" /><br />
+                    <div class="section-title">Coming soon</div>
+                   <input  type="text" placeholder="-" /><br />
                 </section>
                 <section id="">
-                   <input  type="text" placeholder="google.com" /><br />
+                    <div class="section-title">Coming soon</div>
+                   <input  type="text" placeholder="-" /><br />
                 </section>
                 <section id="">
-                   <input  type="text" placeholder="google.com" /><br />
+                    <div class="section-title">Coming soon</div>
+                   <input  type="text" placeholder="-" /><br />
 
                 </section>
 
@@ -89,9 +93,7 @@
                 
                 box-sizing: border-box;
             }
-            input[type="file"] {
-    display: block;
-  }
+
         </style>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/6.0.1/tesseract.min.js" integrity="sha512-x3WuOingc6Q+P7pb4dV+MFLvfjIzTzk+e/HZwSdeIZ5VT5PEA67LMn60Tp3G7cj4pYVbdsPF0zjFqafDt/gOnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
