@@ -33,7 +33,6 @@ const cdns = {
     "trashBtn": '<i class="fa-regular fa-trash-can"></i>'
 };
 let htmlCode = '';
-
 /*************************************************   CLIPBOARD FUNCTION  **********************************************/
 // Función para copiar al portapapeles
 function copyToClipboard(text) {
@@ -45,12 +44,10 @@ function copyToClipboard(text) {
             timer: 3000,
             showConfirmButton: false
         });
-
     }).catch(err => {
         console.error('Error al copiar: ', err);
     });
 }
-
 // Agregar eventos de clic a los botones
 document.querySelectorAll('.btn-copy').forEach(button => {
     button.addEventListener('click', () => {
@@ -64,9 +61,8 @@ document.querySelectorAll('.btn-copy').forEach(button => {
         }
     });
 });
-
 /*************************************************   FAVICON GENERATOR  **********************************************/
-function handleImageUpload(event) {
+function handleFaviconUpload(event) {
     const fileInput = document.getElementById('file-upload');
     const file = fileInput.files[0];
     
@@ -153,7 +149,7 @@ function generateHtmlCode(favicons) {
         });
     });
 // Configuración de eventos
-document.getElementById('file-upload').addEventListener('change', handleImageUpload);
+document.getElementById('file-upload').addEventListener('change', handleFaviconUpload);
 
 /*document.getElementById('convert-button').addEventListener('click', handleImageUpload);*/
 
