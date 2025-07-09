@@ -272,9 +272,7 @@ a{
     .container {
         grid-template-columns: repeat(3, 1fr);
     }
-    .uncle-harlo {
-        grid-template-columns: repeat(3, 50px); /* 3 columnas en pantallas menores a 1500px */
-    }
+
 }
 
 @media (max-width: 1000px) {
