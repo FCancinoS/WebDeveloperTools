@@ -32,6 +32,8 @@ const cdns = {
     "whatsappBtn": '<i class="fa-brands fa-whatsapp"></i>',
     "trashBtn": '<i class="fa-regular fa-trash-can"></i>'
 };
+let htmlCode = '';
+
 /*************************************************   CLIPBOARD FUNCTION  **********************************************/
 // Función para copiar al portapapeles
 function copyToClipboard(text) {
@@ -132,10 +134,11 @@ function generateZip(favicons) {
 function generateHtmlCode(favicons) {
     let htmlCode = ''; // Variable para almacenar el código HTML
 
-    favicons.forEach(favicon => {
+     favicons.forEach(favicon => {
         htmlCode += `<link rel="icon" type="image/png" sizes="${favicon.size}x${favicon.size}" href="img/favicons/favicon-${favicon.size}x${favicon.size}.png">\n`;
     });
     // Copiar el código HTML al portapapeles
+}
     document.getElementById('copy-html-button').addEventListener('click', () => {
         navigator.clipboard.writeText(htmlCode).then(() => {
             Swal.fire({
@@ -149,9 +152,6 @@ function generateHtmlCode(favicons) {
             console.error('Error al copiar: ', err);
         });
     });
-
-}
-
 // Configuración de eventos
 document.getElementById('file-upload').addEventListener('change', handleImageUpload);
 
