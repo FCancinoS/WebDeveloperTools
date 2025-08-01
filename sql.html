@@ -34,51 +34,34 @@
         </header>
         <div class="container">
                 <section id="">
-                    <div class="section-title">QR Generator</div>
-                   <input id="text" type="text" placeholder="google.com"  /><br />
-                   <div id="qrcode"></div>     
-                   <button class="btn btn-cyan" id="qrBtn"> Generate</button>
+                    <div class="section-title">Borrar constraints en tabla</div>
+                   <button class="btn btn-cyan" id="delconstraints"> Copiar</button>
+                   <div class="section-title">Borrar constraints en tabla</div>
+                   <button class="btn btn-cyan" id="delconstraints2"> Copiar</button>
+                   <div class="section-title">Borrar tabla con constraints en otra tabla</div>
+                   <button class="btn btn-cyan" id="delconstraints3"> Copiar</button>
                 </section>
                 <section id="">
-                    <div class="section-title">SweetAlerts Generator</div>
-                    <select name="type" id="type-select">
-                        <option value="success">Success</option>
-                        <option value="error">Error</option>
-                        <option value="warning">Warning</option>
-                        <option value="Input">Input</option>
-                    </select>
+                    <div class="section-title">Empty</div>
                    <!--input  type="text" placeholder="Completed" /><br /-->
-                   <button class="btn btn-green" id="swalBtn">Clipboard Copy</button>
                 </section>
                 <section id="">
-                    <div class="section-title">Ticket Scanner</div>
-                    <label for="imageInput" class="custom-file-upload">Choose a ticket to scan</label>
-                     <input id="imageInput" type="file" accept="image/*" /><br />  
-                     <button class="btn btn-cyan" id="scanBtn"> Scan</button>
+                    <div class="section-title">Empty 2</div>
                 </section>
                 <section id="">
-                    <div class="section-title">Ticket Interpreter</div>
-                    <label for="imageInputInterpreter" class="custom-file-upload">Choose a ticket to decode</label>
-                   <input  id="imageInputInterpreter" type="file" placeholder="google.com" /><br /> 
-                   <button class="btn btn-cyan" id="decodeBtn"> Decode</button>
+                    <div class="section-title">Empty 3</div>
                 </section>
                 <section id="">
-                    <div class="section-title">Html Menu Pages Generator</div>
-                   <input  type="text" placeholder="title;menu-1;menu-2;menu-3;menu4;" /><br />
-                   <button class="btn btn-green" id="Btn"> Clipboard Copy</button>
+                    <div class="section-title">Empty 4</div>
                 </section>
                 <section id="">
-                    <div class="section-title">Coming soon</div>
-                   <input  type="text" placeholder="-" /><br />
+                    <div class="section-title">Empty 5</div>
                 </section>
                 <section id="">
-                    <div class="section-title">Coming soon</div>
-                   <input  type="text" placeholder="-" /><br />
+                    <div class="section-title">Empty 6</div>
                 </section>
                 <section id="">
-                    <div class="section-title">Coming soon</div>
-                   <input  type="text" placeholder="-" /><br />
-
+                    <div class="section-title">Empty 7</div>
                 </section>
 
         </div>
@@ -97,9 +80,75 @@
 
         </style>
     </main>
+   <script>
+  // Variables con el contenido a copiar
+  const delconstraintsText = `SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS pmdobs;
+SET FOREIGN_KEY_CHECKS = 1;`;
+
+  const delconstraints2Text = `SELECT TABLE_NAME, CONSTRAINT_NAME, REFERENCED_TABLE_NAME
+FROM information_schema.KEY_COLUMN_USAGE
+WHERE REFERENCED_TABLE_NAME = 'gprogp';`;
+
+  const delconstraints3Text = `ALTER TABLE gmatrz DROP FOREIGN KEY gelemr_ibfk_1;
+DROP TABLE IF EXISTS gmatrz;`;
+
+  // Función para copiar texto y mostrar alerta
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        Swal.fire({
+          icon: 'success',
+          text: 'Código copiado exitosamente',
+          timer: 1500,
+          showConfirmButton: false
+        });
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: 'error',
+          text: 'Error al copiar al portapapeles',
+          timer: 1500,
+          showConfirmButton: false
+        });
+      });
+  }
+
+  // Asignar eventos a los botones
+  document.getElementById('delconstraints').addEventListener('click', () => {
+    copyToClipboard(delconstraintsText);
+  });
+
+  document.getElementById('delconstraints2').addEventListener('click', () => {
+    copyToClipboard(delconstraints2Text);
+  });
+
+  document.getElementById('delconstraints3').addEventListener('click', () => {
+    copyToClipboard(delconstraints3Text);
+  });
+</script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/6.0.1/tesseract.min.js" integrity="sha512-x3WuOingc6Q+P7pb4dV+MFLvfjIzTzk+e/HZwSdeIZ5VT5PEA67LMn60Tp3G7cj4pYVbdsPF0zjFqafDt/gOnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/app.js"></script>
-    <script src="./js/feUtilities.js"></script>
 </body>
 </html>
+
+<!--
+usos frecuentes en mysql
+
+borrar constraints en tabla
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS pmdobs;
+SET FOREIGN_KEY_CHECKS = 1;
+
+encontrat constraints en tabla
+SELECT TABLE_NAME, CONSTRAINT_NAME, REFERENCED_TABLE_NAME
+FROM information_schema.KEY_COLUMN_USAGE
+WHERE REFERENCED_TABLE_NAME = 'gprogp';
+
+borrar tabla con constraint en otra tabla
+ALTER TABLE gmatrz DROP FOREIGN KEY gelemr_ibfk_1
+
+DROP TABLE IF EXISTS gmatrz
+-->
