@@ -104,6 +104,7 @@ function generateFavicons(image) {
     });
 
     generateZip(favicons); // Generar el ZIP directamente
+     generateHtmlCode(favicons); 
 }
 
 // Función para generar el archivo ZIP
@@ -127,14 +128,15 @@ function generateZip(favicons) {
     generateHtmlCode(favicons); 
 }
 // Función para generar el código HTML de integración
+// Función para generar el código HTML de integración
 function generateHtmlCode(favicons) {
-    let htmlCode = ''; // Variable para almacenar el código HTML
-
-     favicons.forEach(favicon => {
-        htmlCode += `<link rel="icon" type="image/png" sizes="${favicon.size}x${favicon.size}" href="img/favicons/favicon-${favicon.size}x${favicon.size}.png">\n`;
-    });
-    // Copiar el código HTML al portapapeles
+    htmlCode = favicons          // ← usa la global
+        .map(favicon => 
+            `<link rel="icon" type="image/png" sizes="${favicon.size}x${favicon.size}" href="img/favicons/favicon-${favicon.size}x${favicon.size}.png">`
+        )
+        .join('\n');
 }
+
     document.getElementById('copy-html-button').addEventListener('click', () => {
         navigator.clipboard.writeText(htmlCode).then(() => {
             Swal.fire({
